@@ -176,6 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3733808383292795280}
   - component: {fileID: 3772784537960418937}
+  - component: {fileID: 8030557585953573302}
   m_Layer: 0
   m_Name: YellowShroom
   m_TagString: Untagged
@@ -296,3 +297,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &8030557585953573302
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4078843294836765482}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.6647153
+  m_Height: 5.1593385
+  m_Direction: 1
+  m_Center: {x: 0.16471522, y: 2.0796683, z: 0}

@@ -176,6 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8765449362782789570}
   - component: {fileID: 9092654107850373143}
+  - component: {fileID: 3230681333707374504}
   m_Layer: 0
   m_Name: BlueShroom
   m_TagString: Untagged
@@ -296,3 +297,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &3230681333707374504
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8281822217783199096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.8110861
+  m_Height: 5.204554
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.102278, z: -0.04143992}
