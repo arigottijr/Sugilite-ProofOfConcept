@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class SoundCollectionSprite : MonoBehaviour
 {
-    public TextMeshProUGUI soundDisplay;
     public Canvas inventory;
 
     private GameObject currentSoundCheck;
@@ -26,16 +25,19 @@ public class SoundCollectionSprite : MonoBehaviour
             if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Object") //if ray hits object with object tag
             {
                 Debug.Log("Hit" + hit.collider.name); 
-                AudioClip audioClip = hit.collider.gameObject.GetComponent<AudioSource>().clip; //audioClip variable will become the audio clip of the object it hit
-                Sprite objectSprite = hit.collider.gameObject.GetComponentInChildren<SpriteRenderer>(true).sprite; //name will be name of object hit
-                AddSound(objectSprite, audioClip); //will call add sound function with the name and the audio clip as the string and audioclip variable
+                
+                Debug.Log("Audio:" + hit.collider.gameObject.GetComponent<AudioSource>().clip);
 
-                Debug.Log("" + objectSprite, audioClip);
+                AudioClip audioClip = hit.collider.gameObject.GetComponent<AudioSource>().clip; //audioClip variable will become the audio clip of the object it hit
+                Debug.Log("Sprite:" + hit.collider.gameObject.GetComponentInChildren<SpriteRenderer>(true).sprite);
+                Sprite objectSprite = hit.collider.gameObject.GetComponentInChildren<SpriteRenderer>(true).sprite; //name will be name of object hit
+                Debug.Log("Sprite:" + hit.collider.gameObject.GetComponentInChildren<SpriteRenderer>(true).sprite);
+                AddSound(objectSprite, audioClip); //will call add sound function with the name and the audio clip as the string and audioclip variable
             }
 
 
         }
-        if (Input.GetKeyDown(KeyCode.E)) //when E is pressed
+        if (Input.GetKeyDown(KeyCode.F)) //when E is pressed
         {
             RaycastHit hit; 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -52,8 +54,36 @@ public class SoundCollectionSprite : MonoBehaviour
                     hit.collider.gameObject.GetComponent<AudioSource>().Play(); //audio clip will play
                     Debug.Log("Sound Assigned");
                 }
+
+                if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Object")
+                {
+                    hit.collider.gameObject.GetComponent<AudioSource>().Play();
+                }
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            RaycastHit hit; 
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Sound Check")
+            {
+                AudioSource volume = hit.collider.gameObject.GetComponent<AudioSource>();
+                SoundEditing.RaiseVolume(volume);
+            }
+        }
+        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            RaycastHit hit; 
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Sound Check")
+            {
+                AudioSource volume = hit.collider.gameObject.GetComponent<AudioSource>();
+                SoundEditing.LowerVolume(volume);
+            }
+        }
+
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -99,33 +129,33 @@ public class SoundCollectionSprite : MonoBehaviour
 
     public void RemoveSound(GameObject obj) //function takes a game object
     {
+        List<Sprite> keysToRemove = new List<Sprite>(); // create a list of keys to remove
         foreach(KeyValuePair<Sprite, AudioClip> keyValuePair in soundsCollected) //looks through the dictionary, grabbing the keys and corresponding value
         {
-            for (int i = 0; i < soundSprite.Length; i++)
+            if (keyValuePair.Key == obj.GetComponent<Image>().sprite) //if the text in the input field matches a key in the dictionary
             {
-                if (soundSprite[i].sprite == keyValuePair.Key) //if the text in the input field matches a key in the dictionary
-                {
                     Sprite soundIcon = keyValuePair.Key; //the matching key will become the string for soundName variable
                     AudioClip sound = keyValuePair.Value; //the corresponding value to the key will become the audioClip for sound variable
                     currentSoundCheck.GetComponent<AudioSource>().clip = sound; //get the gameObject Audio source component and make the Audio Clip in the audio source = the sound variable from the dictionary
                     currentSoundCheck.GetComponentInChildren<SpriteRenderer>(true).sprite = soundIcon;
-                    soundsCollected.Remove(soundIcon); //remove sound name from the dictionary which will equal the key assigned to soundName
                     obj.GetComponent<Image>().sprite = null; //turn the sprite in inventory to null
                     obj.GetComponent<Image>().color = Color.clear; //make the transparency clear
                     ChooseSound(true); //call choose sound as bool
-                    return;
+                    
+                    keysToRemove.Add(soundIcon);
 
-                }
             }
 
+        }
+        foreach (Sprite key in keysToRemove)
+        {
+            soundsCollected.Remove(key); // remove the keys from the dictionary outside the loop
         }
     }
 
     public void DisplaySounds(Sprite soundIcon)
     {
-        soundDisplay.text = "Sounds:\n"; //Text will say sound
-        
-            for (int i = 0; i < soundSprite.Length; i++)
+        for (int i = 0; i < soundSprite.Length; i++)
             {
                 if (soundSprite[i].sprite == null) //this is where sprite is placed.
                 {
