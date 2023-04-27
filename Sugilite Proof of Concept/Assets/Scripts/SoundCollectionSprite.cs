@@ -48,15 +48,9 @@ public class SoundCollectionSprite : MonoBehaviour
                 if (hit.collider.gameObject.GetComponent<AudioSource>().clip == null) //if there is no audio clip
                 {
                     currentSoundCheck = hit.collider.gameObject; //and currentSoundCheck will equal object hit
-                    ChooseSound(false); // calls choose sound function as false
+                    LockMouseAndCharacter(false); // calls choose sound function as false
 
                 }
-                else //if sound already assigned then
-                {
-                    hit.collider.gameObject.GetComponent<AudioSource>().Play(); //audio clip will play
-                    Debug.Log("Sound Assigned");
-                }
-
                 if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Object")
                 {
                     hit.collider.gameObject.GetComponent<AudioSource>().Play();
@@ -73,18 +67,17 @@ public class SoundCollectionSprite : MonoBehaviour
                 if (soundEditorUp == false)
                 {
                     soundEditing.gameObject.SetActive(true);
-                    ChooseSound(false);
+                    soundEditorUp = true;
+                    LockMouseAndCharacter(false);
                     
                 }
                 else if (soundEditorUp == true)
                 {
                     soundEditing.gameObject.SetActive(false);
-                    ChooseSound(true);
+                    soundEditorUp = false;
+                    LockMouseAndCharacter(true);
                 }
-                
             }
-            
-           
         }
 
 
@@ -106,15 +99,13 @@ public class SoundCollectionSprite : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && !inventoryUp) //if enter is pressed when inventoryUp bool is false
         {
-            inventory.gameObject.SetActive(true); //activate canvas
-            inventoryUp = true; //turn inventory up bool to true
+           ShowInventoryUI(true);
             return;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && inventoryUp) //if enter is pressed when bool is true
         {
-            inventory.gameObject.SetActive(false); //turn off canvas
-            inventoryUp = false; //turn bool false
+           ShowInventoryUI(false);
         }
         
         
@@ -143,7 +134,8 @@ public class SoundCollectionSprite : MonoBehaviour
                     currentSoundCheck.GetComponentInChildren<SpriteRenderer>(true).sprite = soundIcon;
                     obj.GetComponent<Image>().sprite = null; //turn the sprite in inventory to null
                     obj.GetComponent<Image>().color = Color.clear; //make the transparency clear
-                    ChooseSound(true); //call choose sound as bool
+                    LockMouseAndCharacter(true); //call choose sound as bool
+                    ShowInventoryUI(false);
                     
                     keysToRemove.Add(soundIcon);
 
@@ -169,18 +161,23 @@ public class SoundCollectionSprite : MonoBehaviour
             }
     }
 
-    void ChooseSound(bool choose)
+    void LockMouseAndCharacter(bool choose)
     {
         gameObject.GetComponent<FirstPersonDrifter>().enabled = choose; //turn the player script true or false to stop movement
         gameObject.GetComponent<MouseLook>().enabled = choose; //true or false to stop camera rotation
         camera.gameObject.GetComponent<MouseLook>().enabled = choose; //true or false to stop camera rotation
         camera.gameObject.GetComponent<LockMouse>().LockCursor(choose); //true or false to lock mouse
-        camera.gameObject.GetComponent<LockMouse>().enabled = choose; 
-        //inventory.gameObject.SetActive(!choose); 
-        //inventoryUp = !choose; 
+        camera.gameObject.GetComponent<LockMouse>().enabled = choose;
         Cursor.visible = !choose;
         
     }
+
+    void ShowInventoryUI(bool value)
+    {
+        inventory.gameObject.SetActive(value); 
+        inventoryUp = value;
+    }
+    
     
 
 }

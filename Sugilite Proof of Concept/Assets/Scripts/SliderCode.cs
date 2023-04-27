@@ -31,11 +31,6 @@ public class SliderCode : MonoBehaviour
     }
   }
 
-  public static void ReplaceSound()
-  {
-    
-  }
-  
   public enum AudioMixMode
   {
     LinearAudioSourceVolume,
