@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Object
   - Sound Check
+  - SoundEditor
   layers:
   - Default
   - TransparentFX

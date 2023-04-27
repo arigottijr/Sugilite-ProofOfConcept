@@ -9,10 +9,12 @@ using UnityEngine.UI;
 public class SoundCollectionSprite : MonoBehaviour
 {
     public Canvas inventory;
+    public Canvas soundEditing;
 
     private GameObject currentSoundCheck;
 
     private bool inventoryUp = false;
+    private bool soundEditorUp = false;
     public GameObject camera;
 
      public void Update()
@@ -62,26 +64,27 @@ public class SoundCollectionSprite : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            RaycastHit hit; 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Sound Check")
-            {
-                AudioSource volume = hit.collider.gameObject.GetComponent<AudioSource>();
-                SoundEditing.RaiseVolume(volume);
-            }
-        }
-        
         if (Input.GetKeyDown(KeyCode.E))
         {
-            RaycastHit hit; 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Sound Check")
+            RaycastHit hit; //shoot ray
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //from mouse and camera position
+            if (Physics.Raycast(ray, out hit) && hit.collider.tag == "SoundEditor") //if ray hits object with object tag
             {
-                AudioSource volume = hit.collider.gameObject.GetComponent<AudioSource>();
-                SoundEditing.LowerVolume(volume);
+                if (soundEditorUp == false)
+                {
+                    soundEditing.gameObject.SetActive(true);
+                    ChooseSound(false);
+                    
+                }
+                else if (soundEditorUp == true)
+                {
+                    soundEditing.gameObject.SetActive(false);
+                    ChooseSound(true);
+                }
+                
             }
+            
+           
         }
 
 
@@ -173,8 +176,8 @@ public class SoundCollectionSprite : MonoBehaviour
         camera.gameObject.GetComponent<MouseLook>().enabled = choose; //true or false to stop camera rotation
         camera.gameObject.GetComponent<LockMouse>().LockCursor(choose); //true or false to lock mouse
         camera.gameObject.GetComponent<LockMouse>().enabled = choose; 
-        inventory.gameObject.SetActive(!choose); 
-        inventoryUp = !choose; 
+        //inventory.gameObject.SetActive(!choose); 
+        //inventoryUp = !choose; 
         Cursor.visible = !choose;
         
     }
