@@ -11,11 +11,11 @@ public class PlaySound : MonoBehaviour
   public void PlaySounds()
   {
       
-      source1.GetComponent<AudioSource>().Play();
-      source2.GetComponent<AudioSource>().Play();
-      source3.GetComponent<AudioSource>().Play();
-      source4.GetComponent<AudioSource>().Play();
-      source5.GetComponent<AudioSource>().Play();
+      source1.gameObject.GetComponent<AudioSource>().Play();
+      source2.gameObject.GetComponent<AudioSource>().Play();
+      source3.gameObject.GetComponent<AudioSource>().Play();
+      source4.gameObject.GetComponent<AudioSource>().Play();
+      source5.gameObject.GetComponent<AudioSource>().Play();
      
 
   }

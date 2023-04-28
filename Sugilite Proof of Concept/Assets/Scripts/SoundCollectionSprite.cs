@@ -49,6 +49,7 @@ public class SoundCollectionSprite : MonoBehaviour
                 {
                     currentSoundCheck = hit.collider.gameObject; //and currentSoundCheck will equal object hit
                     LockMouseAndCharacter(false); // calls choose sound function as false
+                    ShowInventoryUI(true);
 
                 }
                 if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Object")
