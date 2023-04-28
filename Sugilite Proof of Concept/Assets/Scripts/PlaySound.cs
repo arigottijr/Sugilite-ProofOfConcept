@@ -10,14 +10,26 @@ public class PlaySound : MonoBehaviour
   
   public void PlaySounds()
   {
+      if (soundsPlaying)
+      {
+          source1.GetComponent<AudioSource>().Play();
+          source2.GetComponent<AudioSource>().Play();
+          source3.GetComponent<AudioSource>().Play();
+          source4.GetComponent<AudioSource>().Play();
+          source5.GetComponent<AudioSource>().Play();
+          soundsPlaying = !soundsPlaying;
+      }
+      else if (!soundsPlaying)
+      {
+          source1.GetComponent<AudioSource>().Stop();
+          source2.GetComponent<AudioSource>().Stop();
+          source3.GetComponent<AudioSource>().Stop();
+          source4.GetComponent<AudioSource>().Stop();
+          source5.GetComponent<AudioSource>().Stop();
+          soundsPlaying = !soundsPlaying;
+      }
       
-      source1.GetComponent<AudioSource>().Play();
-      source2.GetComponent<AudioSource>().Play();
-      source3.GetComponent<AudioSource>().Play();
-      source4.GetComponent<AudioSource>().Play();
-      source5.GetComponent<AudioSource>().Play();
      
-
   }
   
 }

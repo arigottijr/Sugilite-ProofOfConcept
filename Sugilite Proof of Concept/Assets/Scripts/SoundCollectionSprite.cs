@@ -15,6 +15,7 @@ public class SoundCollectionSprite : MonoBehaviour
 
     private bool inventoryUp = false;
     private bool soundEditorUp = false;
+    private bool placeSoundUIUp = false;
     public GameObject camera;
 
      public void Update()
@@ -36,27 +37,18 @@ public class SoundCollectionSprite : MonoBehaviour
                 Debug.Log("Sprite:" + hit.collider.gameObject.GetComponentInChildren<SpriteRenderer>(true).sprite);
                 AddSound(objectSprite, audioClip); //will call add sound function with the name and the audio clip as the string and audioclip variable
             }
-
-
-        }
-        if (Input.GetKeyDown(KeyCode.F)) //when E is pressed
-        {
-            RaycastHit hit; 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Sound Check")
             {
                 if (hit.collider.gameObject.GetComponent<AudioSource>().clip == null) //if there is no audio clip
                 {
                     currentSoundCheck = hit.collider.gameObject; //and currentSoundCheck will equal object hit
                     LockMouseAndCharacter(false); // calls choose sound function as false
-
-                }
-                if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Object")
-                {
-                    hit.collider.gameObject.GetComponent<AudioSource>().Play();
+                    ShowInventoryUI(true);
+                    placeSoundUIUp = true;
                 }
             }
         }
+      
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -69,14 +61,22 @@ public class SoundCollectionSprite : MonoBehaviour
                     soundEditing.gameObject.SetActive(true);
                     soundEditorUp = true;
                     LockMouseAndCharacter(false);
-                    
+                    return;
                 }
-                else if (soundEditorUp == true)
-                {
-                    soundEditing.gameObject.SetActive(false);
-                    soundEditorUp = false;
-                    LockMouseAndCharacter(true);
-                }
+            }
+            
+            if (soundEditorUp == true)
+            {
+                soundEditing.gameObject.SetActive(false);
+                soundEditorUp = false;
+                LockMouseAndCharacter(true);
+            }
+
+            if (placeSoundUIUp == true)
+            {
+                ShowInventoryUI(false);
+                LockMouseAndCharacter(true);
+                placeSoundUIUp = false;
             }
         }
 
