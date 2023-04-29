@@ -90,7 +90,6 @@ public class SoundCollectionSprite : MonoBehaviour
                 Debug.Log("Hit" + hit.collider.name); 
                 AudioClip audioClip = hit.collider.gameObject.GetComponent<AudioSource>().clip; //audioClip variable will become the audio clip of the object it hit
                 Sprite objectSprite = hit.collider.gameObject.GetComponentInChildren<SpriteRenderer>(true).sprite; //name will be name of object hit
-                AddSound(objectSprite, audioClip); //will call add sound function with the name and the audio clip as the string and audioclip variable
                 audioClip = hit.collider.gameObject.GetComponent<AudioSource>().clip = null; //takes audio clip out of the holder
                 objectSprite = hit.collider.gameObject.GetComponentInChildren<SpriteRenderer>(true).sprite = null; //takes sprite out of the holder
                 
