@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6629146737234300965
 Transform:
   m_ObjectHideFlags: 0
@@ -2089,7 +2089,7 @@ GameObject:
   - component: {fileID: -6546925077739982871}
   m_Layer: 0
   m_Name: speakers
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
