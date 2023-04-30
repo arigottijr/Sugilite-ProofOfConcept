@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 954642035594950886}
   m_Layer: 0
   m_Name: YellowShroom
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -328,7 +328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9136680558052849936
 Transform:
   m_ObjectHideFlags: 0

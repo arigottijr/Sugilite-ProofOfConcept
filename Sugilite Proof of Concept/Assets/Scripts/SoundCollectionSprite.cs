@@ -16,7 +16,9 @@ public class SoundCollectionSprite : MonoBehaviour
     private bool inventoryUp = false;
     private bool soundEditorUp = false;
     private bool placeSoundUIUp = false;
+    
     public GameObject camera;
+    public TextMeshProUGUI backButtonDes;
 
      public void Update()
     { 
@@ -45,15 +47,10 @@ public class SoundCollectionSprite : MonoBehaviour
                     LockMouseAndCharacter(false); // calls choose sound function as false
                     ShowInventoryUI(true);
                     placeSoundUIUp = true;
+                    backButtonDes.gameObject.SetActive(true);
                 }
             }
-        }
-      
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            RaycastHit hit; //shoot ray
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //from mouse and camera position
+            
             if (Physics.Raycast(ray, out hit) && hit.collider.tag == "SoundEditor") //if ray hits object with object tag
             {
                 if (soundEditorUp == false)
@@ -61,10 +58,13 @@ public class SoundCollectionSprite : MonoBehaviour
                     soundEditing.gameObject.SetActive(true);
                     soundEditorUp = true;
                     LockMouseAndCharacter(false);
-                    return;
                 }
             }
-            
+        }
+      
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
             if (soundEditorUp == true)
             {
                 soundEditing.gameObject.SetActive(false);
@@ -77,6 +77,7 @@ public class SoundCollectionSprite : MonoBehaviour
                 ShowInventoryUI(false);
                 LockMouseAndCharacter(true);
                 placeSoundUIUp = false;
+                backButtonDes.gameObject.SetActive(false);
             }
         }
 
@@ -98,13 +99,16 @@ public class SoundCollectionSprite : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && !inventoryUp) //if enter is pressed when inventoryUp bool is false
         {
-           ShowInventoryUI(true);
+            ShowInventoryUI(true);
+            LockMouseAndCharacter(false);
             return;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && inventoryUp) //if enter is pressed when bool is true
         {
            ShowInventoryUI(false);
+           LockMouseAndCharacter(true);
+
         }
         
         

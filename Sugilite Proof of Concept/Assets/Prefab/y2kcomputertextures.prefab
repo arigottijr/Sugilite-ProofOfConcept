@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 9064252581515442355}
   m_Layer: 0
   m_Name: y2kcomputertextures
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -501,7 +501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &669537592392674442
 Transform:
   m_ObjectHideFlags: 0
