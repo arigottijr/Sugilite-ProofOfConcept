@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6400184871106937521}
   m_Layer: 0
   m_Name: Flower_bush_red
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,7 +212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5393231756919033156
 Transform:
   m_ObjectHideFlags: 0
