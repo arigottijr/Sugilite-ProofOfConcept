@@ -7,11 +7,16 @@ public class PlaySound : MonoBehaviour
   public GameObject source1, source2, source3, source4,
   source5, source6;
   public bool soundsPlaying = false;
-  
+
+  public GameObject[] source;
   public void PlaySounds()
   {
       if (soundsPlaying)
       {
+          if (source1.GetComponent<AudioSource>().clip != null)
+          {
+              source1.GetComponent<AudioSource>().Play();
+          }
           source1.GetComponent<AudioSource>().Play();
           source2.GetComponent<AudioSource>().Play();
           source3.GetComponent<AudioSource>().Play();
@@ -32,6 +37,32 @@ public class PlaySound : MonoBehaviour
       }
       
      
+  }
+
+  public void PlaySoundArray()
+  {
+      if (soundsPlaying)
+      {
+          for (int i = 0; i < source.Length ; i++)
+          {
+              if (source[i].GetComponent<AudioSource>().clip != null)
+              {
+                  source[i].GetComponent<AudioSource>().Play();
+              }
+          }
+
+          soundsPlaying = !soundsPlaying;
+      }
+      else if (!soundsPlaying)
+      {
+          for (int i = 0; i < source.Length; i++)
+          {
+              if (source[i].GetComponent<AudioSource>().clip != null)
+              {
+                  source[i].GetComponent<AudioSource>().Stop();
+              }
+          }
+      }
   }
   
 }
