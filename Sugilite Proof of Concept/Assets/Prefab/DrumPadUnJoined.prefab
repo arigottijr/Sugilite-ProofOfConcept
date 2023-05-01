@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8651624855183626180}
   - component: {fileID: 6564515962091031223}
   m_Layer: 0
-  m_Name: drumpad.005
+  m_Name: drumPad3
   m_TagString: Sound Check
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,12 +108,12 @@ AudioSource:
   m_GameObject: {fileID: 93575136130218483}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: f24bbc5312c68814d94303912ed1068c, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 823475382}
   - component: {fileID: 5932019114089854841}
   m_Layer: 0
-  m_Name: drumpad.006
+  m_Name: drumPad5
   m_TagString: Sound Check
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,7 +229,7 @@ Transform:
   m_Children:
   - {fileID: 5550650895605602732}
   m_Father: {fileID: 9194669881529563697}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5166685474252042167
 MeshFilter:
@@ -303,12 +303,12 @@ AudioSource:
   m_GameObject: {fileID: 703524453889441056}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: fc9bc91d72a076544bc30efd01f7cb19, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 220155950}
   - component: {fileID: 7049712306287080513}
   m_Layer: 0
-  m_Name: drumpad.008
+  m_Name: drumPad1
   m_TagString: Sound Check
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -592,7 +592,7 @@ Transform:
   m_Children:
   - {fileID: 2410524891957923155}
   m_Father: {fileID: 9194669881529563697}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5152297832697885771
 MeshFilter:
@@ -666,12 +666,12 @@ AudioSource:
   m_GameObject: {fileID: 2993911083100928822}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 88aa0d59074bff142b1a3f3f6a0f4846, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -851,7 +851,7 @@ GameObject:
   - component: {fileID: 8651624855183626184}
   - component: {fileID: 8786996116834578456}
   m_Layer: 0
-  m_Name: drumpad
+  m_Name: drumpad4
   m_TagString: Sound Check
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -864,14 +864,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4010435543112737589}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.97975135, y: -0.030623436, z: -1.7540432}
-  m_LocalScale: {x: 100, y: 100, z: 12.371069}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -0.9797516, y: -0.03062439, z: -1.7540436}
+  m_LocalScale: {x: 100, y: 100, z: 12.37107}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6280651169908864993}
   m_Father: {fileID: 9194669881529563697}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8454195358959896031
 MeshFilter:
@@ -945,12 +945,12 @@ AudioSource:
   m_GameObject: {fileID: 4010435543112737589}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: cfe09dc0ab72ef440bf038a9b68f3083, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1046,7 +1046,7 @@ GameObject:
   - component: {fileID: 1491198263}
   - component: {fileID: 1542699721613423057}
   m_Layer: 0
-  m_Name: drumpad.007
+  m_Name: drumPad2
   m_TagString: Sound Check
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1066,7 +1066,7 @@ Transform:
   m_Children:
   - {fileID: 1924573110543225871}
   m_Father: {fileID: 9194669881529563697}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3082804013988632361
 MeshFilter:
@@ -1140,12 +1140,12 @@ AudioSource:
   m_GameObject: {fileID: 4702802846047030682}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ff56b71c2ec121640bbfefd6de8b2278, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1423,12 +1423,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4848888375027426184}
-  - {fileID: 2916711618263356448}
-  - {fileID: 1098728673201263325}
-  - {fileID: 1998914189360537502}
-  - {fileID: 4729044105318813214}
   - {fileID: 5992850892104362323}
+  - {fileID: 4729044105318813214}
+  - {fileID: 1098728673201263325}
+  - {fileID: 4848888375027426184}
+  - {fileID: 1998914189360537502}
+  - {fileID: 2916711618263356448}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
@@ -1530,7 +1530,7 @@ GameObject:
   - component: {fileID: 8651624855183626181}
   - component: {fileID: 7512027732858878222}
   m_Layer: 0
-  m_Name: drumpad.004
+  m_Name: drumPad6
   m_TagString: Sound Check
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1550,7 +1550,7 @@ Transform:
   m_Children:
   - {fileID: 8497814824137580449}
   m_Father: {fileID: 9194669881529563697}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8697218719803895231
 MeshFilter:
@@ -1624,12 +1624,12 @@ AudioSource:
   m_GameObject: {fileID: 8957586967712062517}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 6e77343f9e49a4a40a15dfe2f4183cdd, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
