@@ -554,7 +554,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7692262380452666144}
   - component: {fileID: 9145533605245268132}
-  - component: {fileID: 6252989379284925937}
   m_Layer: 0
   m_Name: Crystal2
   m_TagString: Object
@@ -678,17 +677,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!64 &6252989379284925937
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7692262380452666151}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
