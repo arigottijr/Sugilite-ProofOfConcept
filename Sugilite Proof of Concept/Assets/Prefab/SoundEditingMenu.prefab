@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4699432974632468061}
   m_Layer: 5
-  m_Name: --SoundHolder6--
+  m_Name: --DrumPad6--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 3926693789586915889}
   - component: {fileID: 5253843666861880735}
   m_Layer: 5
-  m_Name: Sound
+  m_Name: drumPad6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,8 +209,8 @@ RectTransform:
   m_Father: {fileID: 680629131170942275}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -299,7 +299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4515349474629584760}
   m_Layer: 5
-  m_Name: --SoundHolder2--
+  m_Name: --DrumPad2--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 4515349474638020549}
   - component: {fileID: 4515349474638020550}
   m_Layer: 5
-  m_Name: Sound
+  m_Name: drumPad2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -572,8 +572,8 @@ RectTransform:
   m_Father: {fileID: 4515349476583783261}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -685,8 +685,8 @@ RectTransform:
   m_Father: {fileID: 4515349475737959478}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -764,7 +764,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 50, y: -70}
-  m_SizeDelta: {x: 38, y: 33}
+  m_SizeDelta: {x: 50, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4515349474811309234
 CanvasRenderer:
@@ -875,7 +875,7 @@ GameObject:
   - component: {fileID: 4515349474825147352}
   - component: {fileID: 4515349474825147353}
   m_Layer: 5
-  m_Name: Sound
+  m_Name: drumPad5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1010,7 +1010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4515349474931259946}
   m_Layer: 5
-  m_Name: --SoundHolder1--
+  m_Name: --DrumPad1--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1051,7 +1051,7 @@ GameObject:
   - component: {fileID: 4515349474998010662}
   - component: {fileID: 4515349474998010663}
   m_Layer: 5
-  m_Name: Sound
+  m_Name: drumPad3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1210,7 +1210,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1405,8 +1405,8 @@ RectTransform:
   m_Father: {fileID: 4515349474714976874}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1595,7 +1595,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1924,7 +1924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4515349475611906019}
   m_Layer: 5
-  m_Name: --SoundHolder3--
+  m_Name: --DrumPad3--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1965,7 +1965,7 @@ GameObject:
   - component: {fileID: 4515349475612448013}
   - component: {fileID: 4515349475612448014}
   m_Layer: 5
-  m_Name: Sound
+  m_Name: drumPad4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2176,7 +2176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4515349475699134846}
   m_Layer: 5
-  m_Name: --SoundHolder5--
+  m_Name: --DrumPad5--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2450,7 +2450,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2539,7 +2539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4515349475760923994}
   m_Layer: 5
-  m_Name: --SoundHolder4--
+  m_Name: --DrumPad4--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2675,8 +2675,8 @@ RectTransform:
   m_Father: {fileID: 4515349475892888365}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2752,7 +2752,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3181,7 +3181,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3259,7 +3259,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 50, y: -70}
-  m_SizeDelta: {x: 38, y: 33}
+  m_SizeDelta: {x: 50, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4515349476499456080
 CanvasRenderer:
@@ -3394,7 +3394,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 50, y: -70}
-  m_SizeDelta: {x: 38, y: 33}
+  m_SizeDelta: {x: 50, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4515349476536001259
 CanvasRenderer:
@@ -3542,7 +3542,6 @@ GameObject:
   - component: {fileID: 4515349476622448588}
   - component: {fileID: 4515349476622448589}
   - component: {fileID: 4515349476622448590}
-  - component: {fileID: 4515349476622448591}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3653,8 +3652,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4515349476622448591}
-        m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: PlaySounds
         m_Mode: 1
         m_Arguments:
@@ -3665,25 +3664,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4515349476622448591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4515349476622448585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e45950a99e382149aeb0d8460a8b12a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  source1: {fileID: 4515349474931259947}
-  source2: {fileID: 4515349474629584761}
-  source3: {fileID: 4515349475611906044}
-  source4: {fileID: 4515349475760923995}
-  source5: {fileID: 4515349475699134847}
-  source6: {fileID: 0}
-  soundsPlaying: 0
 --- !u!1 &4515349476663695306
 GameObject:
   m_ObjectHideFlags: 0
@@ -3720,7 +3700,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 50, y: -70}
-  m_SizeDelta: {x: 38, y: 33}
+  m_SizeDelta: {x: 50, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4515349476663695311
 CanvasRenderer:
@@ -3852,8 +3832,8 @@ RectTransform:
   m_Father: {fileID: 4515349474691814144}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3931,7 +3911,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 50, y: -70}
-  m_SizeDelta: {x: 38, y: 33}
+  m_SizeDelta: {x: 50, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4515349476715909295
 CanvasRenderer:
@@ -4042,7 +4022,7 @@ GameObject:
   - component: {fileID: 4515349476729275925}
   - component: {fileID: 4515349476729275926}
   m_Layer: 5
-  m_Name: Sound
+  m_Name: drumPad1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4185,7 +4165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4515349476739223672
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4385,7 +4365,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4637,7 +4617,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 50, y: -70}
-  m_SizeDelta: {x: 38, y: 33}
+  m_SizeDelta: {x: 50, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2546461386638908751
 CanvasRenderer:
@@ -4928,7 +4908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8162b151b7f74874ebbadbd2669d9a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: fc9bc91d72a076544bc30efd01f7cb19, type: 2}
+  mixer: {fileID: 24100000, guid: 6e77343f9e49a4a40a15dfe2f4183cdd, type: 2}
   source: {fileID: 0}
   valueText: {fileID: 2163037219457007915}
   mixMode: 2
