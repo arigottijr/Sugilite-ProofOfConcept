@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.002714504, g: 0.043034054, b: 0.12466498, a: 1}
+  m_IndirectSpecularColor: {r: 0.0027122726, g: 0.04307671, b: 0.124400124, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14124,6 +14124,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1025534088}
     m_Modifications:
+    - target: {fileID: 5276857806055592697, guid: 23bf598e44bfb564a8816303ee721e2e, type: 3}
+      propertyPath: MaxDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276857806055592697, guid: 23bf598e44bfb564a8816303ee721e2e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 62c41d1b6f0224f889740828a5963464, type: 3}
+    - target: {fileID: 5276857806055592697, guid: 23bf598e44bfb564a8816303ee721e2e, type: 3}
+      propertyPath: rolloffMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276857806055592697, guid: 23bf598e44bfb564a8816303ee721e2e, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5765064347256041506, guid: 23bf598e44bfb564a8816303ee721e2e, type: 3}
       propertyPath: m_RootOrder
       value: 3
