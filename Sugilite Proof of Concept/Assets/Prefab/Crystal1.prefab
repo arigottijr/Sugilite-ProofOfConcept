@@ -638,6 +638,7 @@ GameObject:
   - component: {fileID: 8232427840233443025}
   - component: {fileID: 4755721364758882086}
   - component: {fileID: 2491602221744321065}
+  - component: {fileID: 105668831285404368}
   m_Layer: 0
   m_Name: Crystal1
   m_TagString: Object
@@ -776,6 +777,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &105668831285404368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8232427840233443030}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.9336325, z: 1}
+  m_Center: {x: 0, y: 0.82512325, z: 0}
 --- !u!1 &8911904700079983128
 GameObject:
   m_ObjectHideFlags: 0
