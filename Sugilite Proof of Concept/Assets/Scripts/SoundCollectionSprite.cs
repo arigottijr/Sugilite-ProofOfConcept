@@ -10,6 +10,7 @@ public class SoundCollectionSprite : MonoBehaviour
 {
     public Canvas inventory;
     public Canvas soundEditing;
+    public Canvas reticle;
 
     private GameObject currentDrumPad;
 
@@ -41,6 +42,7 @@ public class SoundCollectionSprite : MonoBehaviour
                     currentDrumPad = hit.collider.gameObject; //and currentSoundCheck will equal object hit
                     LockMouseAndCharacter(false); // calls choose sound function as false
                     ShowInventoryUI(true);
+                    reticle.gameObject.SetActive(false);
                     placeSoundUIUp = true;
                     backButtonDes.gameObject.SetActive(true);
                 }
@@ -73,6 +75,7 @@ public class SoundCollectionSprite : MonoBehaviour
                 LockMouseAndCharacter(true);
                 placeSoundUIUp = false;
                 backButtonDes.gameObject.SetActive(false);
+                reticle.gameObject.SetActive(false);
             }
         }
 
@@ -96,6 +99,7 @@ public class SoundCollectionSprite : MonoBehaviour
         {
             ShowInventoryUI(true);
             LockMouseAndCharacter(false);
+            reticle.gameObject.SetActive(false);
             return;
         }
 
@@ -103,6 +107,7 @@ public class SoundCollectionSprite : MonoBehaviour
         {
            ShowInventoryUI(false);
            LockMouseAndCharacter(true);
+           reticle.gameObject.SetActive(true);
 
         }
         
