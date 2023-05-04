@@ -37,18 +37,17 @@ public class GameManager : MonoBehaviour
 
     #region Play Sound Function
     public bool soundsPlaying = false;
-
-    public GameObject[] source;
+    
     public void PlaySounds()
     {
         if (!soundsPlaying)
         {
-            for (int i = 0; i < source.Length ; i++)
+            for (int i = 0; i < drumPad.Length ; i++)
             {
-                if (source[i].GetComponent<AudioSource>().clip != null)
+                if (drumPad[i].GetComponent<AudioSource>().clip != null)
                 {
-                    source[i].GetComponent<AudioSource>().Play();
-                    Debug.Log("Playing: " + source[i]);
+                    drumPad[i].GetComponent<AudioSource>().Play();
+                    Debug.Log("Playing: " + drumPad[i]);
                 }
             }
 
@@ -58,12 +57,12 @@ public class GameManager : MonoBehaviour
       
         if (soundsPlaying)
         {
-            for (int i = 0; i < source.Length; i++)
+            for (int i = 0; i < drumPad.Length; i++)
             {
-                if (source[i].GetComponent<AudioSource>().clip != null)
+                if (drumPad[i].GetComponent<AudioSource>().clip != null)
                 {
-                    source[i].GetComponent<AudioSource>().Stop();
-                    Debug.Log("Not Playing: " + source[i]);
+                    drumPad[i].GetComponent<AudioSource>().Stop();
+                    Debug.Log("Not Playing: " + drumPad[i]);
 
                 }
             }
