@@ -831,7 +831,7 @@ GameObject:
   - component: {fileID: 139061410}
   - component: {fileID: 139061409}
   m_Layer: 0
-  m_Name: WallOilPaint
+  m_Name: WallFabric
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1898,7 +1898,7 @@ GameObject:
   - component: {fileID: 320940911}
   - component: {fileID: 320940910}
   m_Layer: 0
-  m_Name: WallTest4Unity
+  m_Name: WallFabric
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16560,7 +16560,7 @@ GameObject:
   - component: {fileID: 1699154993}
   - component: {fileID: 1699154992}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: WallFabric
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
