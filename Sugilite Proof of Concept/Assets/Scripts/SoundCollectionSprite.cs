@@ -22,6 +22,8 @@ public class SoundCollectionSprite : MonoBehaviour
     public TextMeshProUGUI backButtonDes;
     public GameManager gameManager;
 
+    public AudioSource feedback;
+
      public void Update()
     { 
        
@@ -34,6 +36,7 @@ public class SoundCollectionSprite : MonoBehaviour
                 AudioClip audioClip = hit.collider.gameObject.GetComponent<AudioSource>().clip; //audioClip variable will become the audio clip of the object it hit
                 Sprite objectSprite = hit.collider.gameObject.GetComponentInChildren<SpriteRenderer>(true).sprite; //name will be name of object hit
                 AddSound(objectSprite, audioClip); //will call add sound function with the name and the audio clip as the string and audioclip variable
+                feedback.Play(); //play feedback sound
             }
             if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Sound Check")
             {
@@ -55,6 +58,7 @@ public class SoundCollectionSprite : MonoBehaviour
                     soundEditing.gameObject.SetActive(true);
                     soundEditorUp = true;
                     LockMouseAndCharacter(false);
+                    reticle.gameObject.SetActive(false);
                 }
             }
         }
@@ -67,6 +71,7 @@ public class SoundCollectionSprite : MonoBehaviour
                 soundEditing.gameObject.SetActive(false);
                 soundEditorUp = false;
                 LockMouseAndCharacter(true);
+                reticle.gameObject.SetActive(true);
             }
 
             if (placeSoundUIUp == true)
@@ -75,7 +80,7 @@ public class SoundCollectionSprite : MonoBehaviour
                 LockMouseAndCharacter(true);
                 placeSoundUIUp = false;
                 backButtonDes.gameObject.SetActive(false);
-                reticle.gameObject.SetActive(false);
+                reticle.gameObject.SetActive(true);
             }
         }
 
@@ -142,7 +147,7 @@ public class SoundCollectionSprite : MonoBehaviour
                     
                     keysToRemove.Add(soundIcon);
                     
-                    gameManager.ChangeSoundName(sound.ToString().Replace("(UnityEngine.AudioClip)", ""), currentDrumPad);
+                    gameManager.ChangeSoundName(sound.ToString().Replace("(UnityEngine.AudioClip)", ""), currentDrumPad); //sound name will equal the sound and current drumpad will be currentdrumpad
 
             }
 
