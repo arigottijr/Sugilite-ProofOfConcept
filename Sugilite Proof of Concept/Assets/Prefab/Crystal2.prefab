@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782870941749962454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0825315, y: -13.760219, z: -13.397987}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -274,7 +274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3201918972659177084}
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 2.0636985, y: -13.874899, z: -13.818152}
+  m_LocalPosition: {x: 0.27540135, y: 0.5659114, z: -0.443235}
   m_LocalScale: {x: 27.595747, y: 27.595755, z: 54.529003}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -306,7 +306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4313991882136956275}
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 1.9989364, y: -13.824126, z: -13.01362}
+  m_LocalPosition: {x: 0.21063924, y: 0.6166841, z: 0.36129704}
   m_LocalScale: {x: 31.175577, y: 31.175585, z: 61.602726}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -338,7 +338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5084373350901528084}
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 1.85, y: -13.76, z: -13.462037}
+  m_LocalPosition: {x: 0.061702847, y: 0.6808101, z: -0.08711967}
   m_LocalScale: {x: 34.39866, y: 34.398666, z: 67.97151}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -370,7 +370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5202291545090624078}
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 3.898297, y: -14.070809, z: -13.473917}
+  m_LocalPosition: {x: 2.11, y: 0.37, z: -0.099}
   m_LocalScale: {x: 29.772467, y: 29.772474, z: 31.2954}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -555,6 +555,7 @@ GameObject:
   - component: {fileID: 7692262380452666144}
   - component: {fileID: 9145533605245268132}
   - component: {fileID: 5569408504627942597}
+  - component: {fileID: 5415104622760493404}
   m_Layer: 0
   m_Name: Crystal2
   m_TagString: Object
@@ -570,7 +571,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7692262380452666151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 0.905, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -691,3 +692,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5415104622760493404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7692262380452666151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ffbee758916c6488a5ff980a979951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amp: 0
+  freq: 0
