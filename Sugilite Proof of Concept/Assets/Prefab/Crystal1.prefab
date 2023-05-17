@@ -338,7 +338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4369484242994431392}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.093803406, y: 0.8666725, z: -0.07953644}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -636,9 +636,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8232427840233443025}
-  - component: {fileID: 4755721364758882086}
   - component: {fileID: 2491602221744321065}
   - component: {fileID: 105668831285404368}
+  - component: {fileID: 3943395443747239264}
   m_Layer: 0
   m_Name: Crystal1
   m_TagString: Object
@@ -667,20 +667,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &4755721364758882086
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8232427840233443030}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!82 &2491602221744321065
 AudioSource:
   m_ObjectHideFlags: 0
@@ -790,6 +776,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.9336325, z: 1}
   m_Center: {x: 0, y: 0.82512325, z: 0}
+--- !u!114 &3943395443747239264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8232427840233443030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ffbee758916c6488a5ff980a979951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amp: 0
+  freq: 0
 --- !u!1 &8911904700079983128
 GameObject:
   m_ObjectHideFlags: 0
