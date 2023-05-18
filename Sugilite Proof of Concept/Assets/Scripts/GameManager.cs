@@ -8,6 +8,14 @@ public class GameManager : MonoBehaviour
     #region ChangeSoundName
     public TextMeshProUGUI[] drumPadText;
     public GameObject[] drumPad;
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
     public void ChangeSoundName(string soundName, GameObject clickedDrumPad) //function calls for string soundname and clicked drumpad
     {
         
@@ -67,4 +75,5 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
+
 }
