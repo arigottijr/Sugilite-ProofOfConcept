@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 23f28882801dc459baca397b8a6328d0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 47efa316dc00f9f499a9058d278d33ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,9 +96,10 @@ GameObject:
   - component: {fileID: 9112291186254732004}
   - component: {fileID: 6335854958874380996}
   - component: {fileID: 6947569891148083485}
+  - component: {fileID: 8662681216023767956}
   m_Layer: 0
   m_Name: Log_big_knotty
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -265,3 +266,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!64 &8662681216023767956
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6650274281774618199}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5298416366543717949, guid: 49368e02a72d82e4ab3bae3d14ea4e64, type: 3}
