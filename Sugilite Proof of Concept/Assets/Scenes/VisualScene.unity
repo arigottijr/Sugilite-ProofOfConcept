@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.002714504, g: 0.043034054, b: 0.12466498, a: 1}
+  m_IndirectSpecularColor: {r: 0.0027122726, g: 0.04307671, b: 0.124400124, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -375,7 +375,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3689208996406308761, guid: 2017653c99e5d4b1695f65597730f85a, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3689208996406308761, guid: 2017653c99e5d4b1695f65597730f85a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -419,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4069394401062384931, guid: 2017653c99e5d4b1695f65597730f85a, type: 3}
       propertyPath: m_Name
-      value: 10RedShroom4
+      value: RedShroom4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2017653c99e5d4b1695f65597730f85a, type: 3}
@@ -1400,7 +1400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4069394401062384931, guid: 2017653c99e5d4b1695f65597730f85a, type: 3}
       propertyPath: m_Name
-      value: 7RedShroom3
+      value: RedShroom3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2017653c99e5d4b1695f65597730f85a, type: 3}
@@ -2202,11 +2202,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 38a4c6611c1c841a998b92ed3a34db35, type: 3}
     - target: {fileID: 3819219004638042941, guid: 5cf4e0d93834b104aa00394108c9a1a4, type: 3}
       propertyPath: m_Name
-      value: NewYellowMushroom
+      value: YellowMushroom1
       objectReference: {fileID: 0}
     - target: {fileID: 4488760478862885255, guid: 5cf4e0d93834b104aa00394108c9a1a4, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4488760478862885255, guid: 5cf4e0d93834b104aa00394108c9a1a4, type: 3}
       propertyPath: m_LocalScale.x
@@ -3933,11 +3933,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 38a4c6611c1c841a998b92ed3a34db35, type: 3}
     - target: {fileID: 3819219004638042941, guid: 5cf4e0d93834b104aa00394108c9a1a4, type: 3}
       propertyPath: m_Name
-      value: NewYellowMushroom
+      value: YellowMushroom2
       objectReference: {fileID: 0}
     - target: {fileID: 4488760478862885255, guid: 5cf4e0d93834b104aa00394108c9a1a4, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4488760478862885255, guid: 5cf4e0d93834b104aa00394108c9a1a4, type: 3}
       propertyPath: m_LocalScale.x
@@ -5890,7 +5890,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 38a4c6611c1c841a998b92ed3a34db35, type: 3}
     - target: {fileID: 3819219004638042941, guid: 5cf4e0d93834b104aa00394108c9a1a4, type: 3}
       propertyPath: m_Name
-      value: NewYellowMushroom
+      value: YellowMushroom3
       objectReference: {fileID: 0}
     - target: {fileID: 4488760478862885255, guid: 5cf4e0d93834b104aa00394108c9a1a4, type: 3}
       propertyPath: m_RootOrder
@@ -13630,7 +13630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4069394401062384931, guid: 2017653c99e5d4b1695f65597730f85a, type: 3}
       propertyPath: m_Name
-      value: 1RedShroom1
+      value: RedShroom1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2017653c99e5d4b1695f65597730f85a, type: 3}
@@ -14369,7 +14369,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 38a4c6611c1c841a998b92ed3a34db35, type: 3}
     - target: {fileID: 3819219004638042941, guid: 5cf4e0d93834b104aa00394108c9a1a4, type: 3}
       propertyPath: m_Name
-      value: NewYellowMushroom
+      value: YellowMushroom4
       objectReference: {fileID: 0}
     - target: {fileID: 4488760478862885255, guid: 5cf4e0d93834b104aa00394108c9a1a4, type: 3}
       propertyPath: m_RootOrder
@@ -14685,7 +14685,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 38a4c6611c1c841a998b92ed3a34db35, type: 3}
     - target: {fileID: 3819219004638042941, guid: 5cf4e0d93834b104aa00394108c9a1a4, type: 3}
       propertyPath: m_Name
-      value: NewYellowMushroom
+      value: YellowMushroom5
       objectReference: {fileID: 0}
     - target: {fileID: 4488760478862885255, guid: 5cf4e0d93834b104aa00394108c9a1a4, type: 3}
       propertyPath: m_RootOrder
@@ -22677,9 +22677,9 @@ Transform:
   - {fileID: 939564392}
   - {fileID: 1992200319}
   - {fileID: 197529808}
+  - {fileID: 52295733}
   - {fileID: 311130577}
   - {fileID: 450179974}
-  - {fileID: 52295733}
   - {fileID: 675546309}
   - {fileID: 1063640992}
   - {fileID: 1085714348}
@@ -22923,7 +22923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4069394401062384931, guid: 2017653c99e5d4b1695f65597730f85a, type: 3}
       propertyPath: m_Name
-      value: 4RedShroom2
+      value: RedShroom2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2017653c99e5d4b1695f65597730f85a, type: 3}
