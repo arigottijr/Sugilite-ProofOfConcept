@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 2556242306670187766}
   - component: {fileID: 1971689038763622010}
   - component: {fileID: 3798801078800369783}
-  - component: {fileID: 1968637352201293319}
+  - component: {fileID: 3925010723775399179}
   m_Layer: 0
   m_Name: RedShroom
   m_TagString: Object
@@ -282,7 +282,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1968637352201293319
+--- !u!114 &3925010723775399179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
