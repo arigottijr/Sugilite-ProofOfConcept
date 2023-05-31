@@ -1,21 +1,25 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SoundCollectionSprite : MonoBehaviour
 {
     public Canvas inventory;
     public Canvas soundEditing;
+    public Canvas HUD;
 
-    private GameObject currentSoundCheck;
+    private GameObject currentDrumPad;
 
     private bool inventoryUp = false;
     private bool soundEditorUp = false;
+    private bool placeSoundUIUp = false;
+    
     public GameObject camera;
+    public TextMeshProUGUI backButtonDes;
+    public GameManager gameManager;
+
+    public AudioSource feedback;
 
      public void Update()
     { 
@@ -24,59 +28,56 @@ public class SoundCollectionSprite : MonoBehaviour
         {
             RaycastHit hit; //shoot ray
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //from mouse and camera position
-            if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Object") //if ray hits object with object tag
+            if (Physics.Raycast(ray, out hit, 8) && hit.collider.tag == "Object") //if ray hits object with object tag
             {
-                Debug.Log("Hit" + hit.collider.name); 
-                
-                Debug.Log("Audio:" + hit.collider.gameObject.GetComponent<AudioSource>().clip);
-
                 AudioClip audioClip = hit.collider.gameObject.GetComponent<AudioSource>().clip; //audioClip variable will become the audio clip of the object it hit
-                Debug.Log("Sprite:" + hit.collider.gameObject.GetComponentInChildren<SpriteRenderer>(true).sprite);
                 Sprite objectSprite = hit.collider.gameObject.GetComponentInChildren<SpriteRenderer>(true).sprite; //name will be name of object hit
-                Debug.Log("Sprite:" + hit.collider.gameObject.GetComponentInChildren<SpriteRenderer>(true).sprite);
                 AddSound(objectSprite, audioClip); //will call add sound function with the name and the audio clip as the string and audioclip variable
+                feedback.Play(); //play feedback sound
             }
-
-
-        }
-        if (Input.GetKeyDown(KeyCode.F)) //when E is pressed
-        {
-            RaycastHit hit; 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Sound Check")
+            if (Physics.Raycast(ray, out hit, 5) && hit.collider.tag == "Sound Check")
             {
                 if (hit.collider.gameObject.GetComponent<AudioSource>().clip == null) //if there is no audio clip
                 {
-                    currentSoundCheck = hit.collider.gameObject; //and currentSoundCheck will equal object hit
+                    currentDrumPad = hit.collider.gameObject; //and currentSoundCheck will equal object hit
                     LockMouseAndCharacter(false); // calls choose sound function as false
-
-                }
-                if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Object")
-                {
-                    hit.collider.gameObject.GetComponent<AudioSource>().Play();
+                    ShowInventoryUI(true);
+                    HUD.gameObject.SetActive(false);
+                    placeSoundUIUp = true;
+                    backButtonDes.gameObject.SetActive(true);
                 }
             }
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            RaycastHit hit; //shoot ray
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //from mouse and camera position
-            if (Physics.Raycast(ray, out hit) && hit.collider.tag == "SoundEditor") //if ray hits object with object tag
+            
+            if (Physics.Raycast(ray, out hit, 5) && hit.collider.tag == "SoundEditor") //if ray hits object with object tag
             {
                 if (soundEditorUp == false)
                 {
                     soundEditing.gameObject.SetActive(true);
                     soundEditorUp = true;
                     LockMouseAndCharacter(false);
-                    
+                    HUD.gameObject.SetActive(false);
                 }
-                else if (soundEditorUp == true)
-                {
-                    soundEditing.gameObject.SetActive(false);
-                    soundEditorUp = false;
-                    LockMouseAndCharacter(true);
-                }
+            }
+        }
+      
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (soundEditorUp == true)
+            {
+                soundEditing.gameObject.SetActive(false);
+                soundEditorUp = false;
+                LockMouseAndCharacter(true);
+                HUD.gameObject.SetActive(true);
+            }
+
+            if (placeSoundUIUp == true)
+            {
+                ShowInventoryUI(false);
+                LockMouseAndCharacter(true);
+                placeSoundUIUp = false;
+                backButtonDes.gameObject.SetActive(false);
+                HUD.gameObject.SetActive(true);
             }
         }
 
@@ -85,27 +86,31 @@ public class SoundCollectionSprite : MonoBehaviour
         {
             RaycastHit hit; //shoot ray
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //from mouse and camera position
-            if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Sound Check") //if ray hits object with object tag
+            if (Physics.Raycast(ray, out hit,5) && hit.collider.tag == "Sound Check") //if ray hits object with object tag
             {
-                Debug.Log("Hit" + hit.collider.name); 
+                currentDrumPad = hit.collider.gameObject;
                 AudioClip audioClip = hit.collider.gameObject.GetComponent<AudioSource>().clip; //audioClip variable will become the audio clip of the object it hit
                 Sprite objectSprite = hit.collider.gameObject.GetComponentInChildren<SpriteRenderer>(true).sprite; //name will be name of object hit
-                AddSound(objectSprite, audioClip); //will call add sound function with the name and the audio clip as the string and audioclip variable
                 audioClip = hit.collider.gameObject.GetComponent<AudioSource>().clip = null; //takes audio clip out of the holder
                 objectSprite = hit.collider.gameObject.GetComponentInChildren<SpriteRenderer>(true).sprite = null; //takes sprite out of the holder
-                
+                gameManager.RemoveSoundName(currentDrumPad);
             }
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && !inventoryUp) //if enter is pressed when inventoryUp bool is false
         {
-           ShowInventoryUI(true);
+            ShowInventoryUI(true);
+            LockMouseAndCharacter(false);
+            HUD.gameObject.SetActive(false);
             return;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && inventoryUp) //if enter is pressed when bool is true
         {
            ShowInventoryUI(false);
+           LockMouseAndCharacter(true);
+           HUD.gameObject.SetActive(true);
+
         }
         
         
@@ -130,14 +135,17 @@ public class SoundCollectionSprite : MonoBehaviour
             {
                     Sprite soundIcon = keyValuePair.Key; //the matching key will become the string for soundName variable
                     AudioClip sound = keyValuePair.Value; //the corresponding value to the key will become the audioClip for sound variable
-                    currentSoundCheck.GetComponent<AudioSource>().clip = sound; //get the gameObject Audio source component and make the Audio Clip in the audio source = the sound variable from the dictionary
-                    currentSoundCheck.GetComponentInChildren<SpriteRenderer>(true).sprite = soundIcon;
+                    currentDrumPad.GetComponent<AudioSource>().clip = sound; //get the gameObject Audio source component and make the Audio Clip in the audio source = the sound variable from the dictionary
+                    currentDrumPad.GetComponentInChildren<SpriteRenderer>(true).sprite = soundIcon;
                     obj.GetComponent<Image>().sprite = null; //turn the sprite in inventory to null
                     obj.GetComponent<Image>().color = Color.clear; //make the transparency clear
                     LockMouseAndCharacter(true); //call choose sound as bool
                     ShowInventoryUI(false);
+                    HUD.gameObject.SetActive(true);
                     
                     keysToRemove.Add(soundIcon);
+                    
+                    gameManager.ChangeSoundName(sound.ToString().Replace("(UnityEngine.AudioClip)", ""), currentDrumPad); //sound name will equal the sound and current drumpad will be currentdrumpad
 
             }
 
@@ -151,14 +159,14 @@ public class SoundCollectionSprite : MonoBehaviour
     public void DisplaySounds(Sprite soundIcon)
     {
         for (int i = 0; i < soundSprite.Length; i++)
+        {
+            if (soundSprite[i].sprite == null) //this is where sprite is placed.
             {
-                if (soundSprite[i].sprite == null) //this is where sprite is placed.
-                {
-                    soundSprite[i].sprite = soundIcon;
-                    soundSprite[i].color = Color.white;
-                    return;
-                }
+                soundSprite[i].sprite = soundIcon;
+                soundSprite[i].color = Color.white;
+                return;
             }
+        }
     }
 
     void LockMouseAndCharacter(bool choose)

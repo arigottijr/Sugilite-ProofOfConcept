@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -10,12 +8,10 @@ public class SliderCode : MonoBehaviour
   [SerializeField] private AudioSource source;
   [SerializeField] private TextMeshProUGUI valueText;
   [SerializeField] private AudioMixMode mixMode;
-
-  public TextMeshProUGUI soundName;
-
+  
   public void OnChangeSlider(float value)
   {
-    valueText.text = value.ToString("N2");
+    valueText.text = (value*100).ToString("N0");
 
     switch (mixMode)
     {
