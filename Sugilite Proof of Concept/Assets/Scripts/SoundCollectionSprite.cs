@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SoundCollectionSprite : MonoBehaviour
@@ -162,14 +159,14 @@ public class SoundCollectionSprite : MonoBehaviour
     public void DisplaySounds(Sprite soundIcon)
     {
         for (int i = 0; i < soundSprite.Length; i++)
+        {
+            if (soundSprite[i].sprite == null) //this is where sprite is placed.
             {
-                if (soundSprite[i].sprite == null) //this is where sprite is placed.
-                {
-                    soundSprite[i].sprite = soundIcon;
-                    soundSprite[i].color = Color.white;
-                    return;
-                }
+                soundSprite[i].sprite = soundIcon;
+                soundSprite[i].color = Color.white;
+                return;
             }
+        }
     }
 
     void LockMouseAndCharacter(bool choose)

@@ -1,7 +1,6 @@
 ﻿// by @torahhorse
 
 using UnityEngine;
-using System.Collections;
 
 public class LockMouse : MonoBehaviour
 {	
